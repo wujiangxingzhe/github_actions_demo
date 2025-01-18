@@ -64,5 +64,8 @@ jobs:
       - name: Build Docker image and push to docker hub
         uses: docker/build-push-action@v3
         with:
+          # fix the issue:Error: buildx failed with: ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+          context: ./react-app
+          file: ./react-app/dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/react-app:latest
