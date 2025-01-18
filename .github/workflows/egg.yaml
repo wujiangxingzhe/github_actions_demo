@@ -66,6 +66,6 @@ jobs:
         with:
           # fix the issue:Error: buildx failed with: ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
           context: ./react-app
-          file: ./react-app/dockerfile
+          file: ./react-app/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/react-app:latest
