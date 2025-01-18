@@ -32,8 +32,12 @@ jobs:
           npm test -- --passWithNoTests
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4 # 使用github-pages-deploy-action插件，将build文件夹下的内容部署到gh-pages分支
+        uses: JamesIves/github-pages-deploy-action@v4 
+        # This action automates the deployment of a project to GitHub Pages. 
+        # It takes the contents of a specified folder (like 'build' or 'dist') and pushes them to a branch (typically 'gh-pages'). 
+        # This branch is then used by GitHub Pages to serve your static website. The action handles all the git commands and deployment steps automatically,
+        # making it easy to deploy static websites, documentation, or other web content directly from your GitHub Actions workflow.
         with:
           BRANCH: gh-pages # 指定部署的分支，没有这个分支会自动创建
-          FOLDER: build # 指定部署的文件夹，默认是build，生成的内容会放在这个文件夹下
+          FOLDER: react-app/build # 指定部署的文件夹，默认是build，生成的内容会放在这个文件夹下
 
