@@ -1,8 +1,42 @@
-# github_actions_demo
-demo for the github actions
+# GitHub Actions Demo with React
 
-## Create .github/workflows/egg.yaml
+This repository demonstrates how to use GitHub Actions with a React application.
 
-This is required for the github actions to run. The action will be triggered when a push is made to the master branch.
+## Project Structure
+
+- `.github/workflows/egg.yaml`: Contains the GitHub Actions workflow configuration
+- `react-app/`: Contains the React application code
+
+## Local Development
+
+To run the application locally:
+
+1. Navigate to the react-app directory:
+   ```bash
+   cd react-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## GitHub Actions Workflow
+
+The workflow will:
+1. Check out the code
+2. Set up Node.js
+3. Install dependencies
+4. Build the application
+5. Run tests
+
+The workflow is triggered on every push to the repository.
 
 
