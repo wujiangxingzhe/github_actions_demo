@@ -2,6 +2,7 @@ name: React CI/CD
 
 on: push
 
+# fix the issue: The deploy step encountered an error: The process '/usr/bin/git' failed with exit code 128
 permissions:
   contents: write
 
