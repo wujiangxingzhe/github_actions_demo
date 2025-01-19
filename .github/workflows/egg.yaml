@@ -51,6 +51,7 @@ jobs:
 
     steps:
       - name: Checkout code
+        needs: [build-and-test] # # This job will only run after build-and-test completes successfully, otherwise both jobs will run parallel
         uses: actions/checkout@v3
 
       - name: Login docker
